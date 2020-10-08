@@ -1,5 +1,6 @@
 package com.example.android.notes;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -37,5 +38,10 @@ public class Note implements Serializable {
 
     public void setNoteText(String noteText) {
         this.noteText = noteText;
+    }
+    @NonNull
+    @Override
+    public String toString() {
+        return title;
     }
 }
