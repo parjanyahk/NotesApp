@@ -18,7 +18,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:includeFontPadding="false"
-        android:textSize="13sp"
+        android:textSize="20sp"
         android:textStyle="bold"/>
 
     <TextView
@@ -30,18 +30,20 @@
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
         android:includeFontPadding="false"
-        android:textSize="12sp"
+        android:textSize="17sp"
         />
 
     <TextView
         android:id="@+id/textDateTime"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         android:includeFontPadding="false"
-        android:textSize="7sp"
-        />
+        android:textSize="10sp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="8dp" />
 
 </LinearLayout>

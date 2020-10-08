@@ -58,7 +58,7 @@
                 android:importantForAutofill="no"
                 android:includeFontPadding="false"
                 android:inputType="text"
-                android:textSize="16sp"
+                android:textSize="25sp"
                 app:layout_constraintTop_toBottomOf="@id/imageBack"/>
 
             <TextView
@@ -68,16 +68,15 @@
                 android:includeFontPadding="false"
                 android:textSize="10sp"
                 app:layout_constraintEnd_toEndOf="@id/inputNoteTitle"
-                app:layout_constraintStart_toStartOf="@id/inputNoteTitle"
                 app:layout_constraintTop_toBottomOf="@id/inputNoteTitle"/>
 
             <EditText
                 android:id="@+id/inputNoteSubtitle"
                 android:layout_width="0dp"
                 android:layout_height="40dp"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="312dp"
-                android:layout_marginRight="312dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginEnd="304dp"
+                android:layout_marginRight="304dp"
                 android:background="@null"
                 android:hint="@string/note_subtitle"
                 android:importantForAutofill="no"
@@ -94,7 +93,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginStart="12dp"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="25dp"
                 android:layout_marginEnd="12dp"
                 android:layout_marginBottom="15dp"
                 android:background="@null"
@@ -104,7 +103,7 @@
                 android:includeFontPadding="false"
                 android:inputType="text"
                 android:minHeight="100dp"
-                android:textSize="13sp"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/inputNoteTitle"/>
 
