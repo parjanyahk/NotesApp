@@ -26,6 +26,7 @@
                 android:layout_marginStart="12dp"
                 android:layout_marginLeft="12dp"
                 android:layout_marginTop="16dp"
+                android:padding="4dp"
                 android:contentDescription="Notes"
                 android:src="@drawable/ic_back"
                 app:layout_constraintStart_toStartOf="parent"
@@ -45,6 +46,20 @@
                 app:layout_constraintTop_toTopOf="@id/imageBack"
                 app:layout_constraintVertical_bias="1.0" />
 
+
+            <ImageView
+                android:id="@+id/deleteNote"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_marginRight="20dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="@id/imageBack"
+                app:layout_constraintRight_toLeftOf="@+id/imageSave"
+                app:layout_constraintTop_toTopOf="@id/imageBack"
+                app:layout_constraintVertical_bias="0.0">
+
+            </ImageView>
 
             <EditText
                 android:id="@+id/inputNoteTitle"

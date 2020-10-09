@@ -1,8 +1,10 @@
 package com.example.android.notes.adapters;
 
+import android.content.DialogInterface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -19,6 +21,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
 
     private List<Note> notes;
     private NotesListener notesListener;
+
 
     public NotesAdapter(List<Note> notes, NotesListener notesListener) {
         this.notes = notes;
@@ -70,6 +73,7 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             textSubtitle = itemView.findViewById(R.id.textSubtitle);
             textDateTime = itemView.findViewById(R.id.textDateTime);
             layoutNote = itemView.findViewById(R.id.layoutNote);
+
         }
 
         void setNote(Note note){
@@ -81,7 +85,9 @@ public class NotesAdapter extends RecyclerView.Adapter<NotesAdapter.NoteViewHold
             }
             textDateTime.setText(note.getDateTime());
 
+
         }
+
     }
 
 }
