@@ -1,4 +1,4 @@
-package com.example.android.notes;
+package com.example.android.notes.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
+
+import com.example.android.notes.entities.Note;
+import com.example.android.notes.adapters.NotesAdapter;
+import com.example.android.notes.database.NotesDatabase;
+import com.example.android.notes.listeners.NotesListener;
+import com.example.android.notes.R;
 
 import java.util.ArrayList;
 import java.util.List;

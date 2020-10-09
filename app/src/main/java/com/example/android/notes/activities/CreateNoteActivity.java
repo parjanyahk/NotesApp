@@ -1,4 +1,4 @@
-package com.example.android.notes;
+package com.example.android.notes.activities;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.android.notes.entities.Note;
+import com.example.android.notes.database.NotesDatabase;
+import com.example.android.notes.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

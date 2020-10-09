@@ -1,4 +1,4 @@
-package com.example.android.notes;
+package com.example.android.notes.entities;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
