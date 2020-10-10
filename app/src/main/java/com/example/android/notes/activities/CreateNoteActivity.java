@@ -128,6 +128,8 @@ public class CreateNoteActivity extends AppCompatActivity {
         }
         new SaveNoteTask().execute();
 
+        Toast.makeText(this, "Note saved", Toast.LENGTH_SHORT).show();
+
     }
 
     private void deleteNote() {
@@ -152,6 +154,8 @@ public class CreateNoteActivity extends AppCompatActivity {
         new DeleteNoteTask().execute();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
+        Toast.makeText(this, "Note deleted", Toast.LENGTH_SHORT).show();
     }
 
     /*instead of line 135 to 154, this:
