@@ -61,6 +61,14 @@ public class CreateNoteActivity extends AppCompatActivity {
             }
         });
 
+        ImageView imageDelete = findViewById(R.id.deleteNote);
+        imageDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                deleteNote();
+            }
+        });
+
 
         if (getIntent().getBooleanExtra("isViewOrUpdate", false)) {
             alreadyAvailableNote = (Note) getIntent().getSerializableExtra("note");
@@ -117,6 +125,30 @@ public class CreateNoteActivity extends AppCompatActivity {
         }
         new SaveNoteTask().execute();
 
+    }
+
+    private void deleteNote() {
+
+        @SuppressLint("StaticFieldLeak")
+        class DeleteNoteTask extends AsyncTask<Void, Void, Void> {
+
+            @Override
+            protected Void doInBackground(Void... voids) {
+                NotesDatabase.getNotesDatabase(getApplicationContext()).noteDao().deleteNote(alreadyAvailableNote);
+                return null;
+            }
+
+            @Override
+            protected void onPostExecute(Void avoid) {
+                super.onPostExecute(avoid);
+                Intent intent = new Intent();
+                setResult(RESULT_OK, intent);
+                finish();
+            }
+        }
+        new DeleteNoteTask().execute();
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }
