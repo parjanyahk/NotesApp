@@ -19,6 +19,9 @@ import com.example.android.notes.R;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class CreateNoteActivity extends AppCompatActivity {
 
@@ -151,4 +154,21 @@ public class CreateNoteActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /*instead of line 135 to 154, this:
+    private void delteNoteExecService() {
+        ExecutorService executorService = Executors.newSingleThreadExecutor();
+        executorService.execute(new Runnable(){
+
+            @Override
+            public void run() {
+                NotesDatabase.getNotesDatabase(getApplicationContext()).noteDao().deleteNote(alreadyAvailableNote);
+
+            }
+        });
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+
+    }*/
+
 }
+
